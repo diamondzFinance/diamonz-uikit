@@ -42,6 +42,10 @@ interface SocialEntry {
     href?: string;
     items?: SocialSubEntry[];
 }
+interface CertificationEntry {
+    img: string;
+    href: string;
+}
 export interface PanelProps {
     isDark: boolean;
     toggleTheme: (isDark: boolean) => void;
@@ -52,6 +56,7 @@ export interface PanelProps {
     links: Array<MenuEntry>;
     priceLink: string;
     socialsOverride?: Array<SocialEntry>;
+    certifications?: Array<CertificationEntry>;
 }
 export interface NavProps extends PanelProps {
     account?: string;

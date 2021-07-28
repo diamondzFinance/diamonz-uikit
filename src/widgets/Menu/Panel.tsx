@@ -35,10 +35,14 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 `;
 
 const Panel: React.FC<Props> = (props) => {
-  const { isPushed, showMenu } = props;
+  const { isPushed, showMenu, certifications } = props;
   return (
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
       <PanelBody {...props} />
+	  {certifications && certifications.map((entry) => {
+		  return (<a target="_blank" rel="noreferrer" href={entry.href}><img src={entry.img} /></a>)
+	    })
+	  }
       <PanelFooter {...props} />
     </StyledPanel>
   );

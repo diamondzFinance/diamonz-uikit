@@ -73,6 +73,7 @@ const Menu: React.FC<NavProps> = ({
   profile,
   children,
   socialsOverride,
+  certifications,
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
@@ -141,6 +142,7 @@ const Menu: React.FC<NavProps> = ({
           links={links}
           priceLink={priceLink}
 		  socialsOverride={socialsOverride}
+		  certifications={certifications}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
